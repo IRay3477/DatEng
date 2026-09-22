@@ -1,0 +1,1847 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 186829592,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              12
+            ]
+          ],
+          "date-time": "2024-05-12T19:25:42Z",
+          "timestamp": 1715541942479
+        },
+        "edition-number": "1",
+        "reference-count": 0,
+        "publisher": "Wiley",
+        "isbn-type": [
+          {
+            "value": "9781119584339",
+            "type": "print"
+          },
+          {
+            "value": "9781119584414",
+            "type": "electronic"
+          }
+        ],
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2021,
+                  6,
+                  11
+                ]
+              ],
+              "date-time": "2021-06-11T00:00:00Z",
+              "timestamp": 1623369600000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2021,
+                  6,
+                  11
+                ]
+              ],
+              "date-time": "2021-06-11T00:00:00Z",
+              "timestamp": 1623369600000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1002/9781119584414.ch4",
+        "type": "other",
+        "created": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              11
+            ]
+          ],
+          "date-time": "2021-06-11T22:03:10Z",
+          "timestamp": 1623448990000
+        },
+        "page": "47-54",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Complete Dental Cleaning"
+        ],
+        "prefix": "10.1002",
+        "member": "311",
+        "published-online": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              11
+            ]
+          ]
+        },
+        "container-title": [
+          "Blackwell's Five\u2010Minute Veterinary Consult Clinical Companion"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F9781119584414.ch4",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119584414.ch4",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119584414.ch4",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              19
+            ]
+          ],
+          "date-time": "2023-08-19T12:01:53Z",
+          "timestamp": 1692446513000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "https://onlinelibrary.wiley.com/doi/10.1002/9781119584414.ch4"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              11
+            ]
+          ]
+        },
+        "ISBN": [
+          "9781119584339",
+          "9781119584414"
+        ],
+        "references-count": 0,
+        "alternative-id": [
+          "10.1002/9781119584414.ch4",
+          "10.1002/9781119584414"
+        ],
+        "URL": "https://doi.org/10.1002/9781119584414.ch4",
+        "archive": [
+          "Portico"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              11
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              4
+            ]
+          ],
+          "date-time": "2024-09-04T18:22:45Z",
+          "timestamp": 1725474165692
+        },
+        "publisher-location": "Berlin, Heidelberg",
+        "reference-count": 18,
+        "publisher": "Springer Berlin Heidelberg",
+        "isbn-type": [
+          {
+            "type": "print",
+            "value": "9783540518853"
+          },
+          {
+            "type": "electronic",
+            "value": "9783540468585"
+          }
+        ],
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  1989,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "1989-01-01T00:00:00Z",
+              "timestamp": 599616000000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 0,
+            "URL": "http://www.springer.com/tdm"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1989
+            ]
+          ]
+        },
+        "DOI": "10.1007/bfb0086411",
+        "type": "book-chapter",
+        "created": {
+          "date-parts": [
+            [
+              2006,
+              11,
+              24
+            ]
+          ],
+          "date-time": "2006-11-24T13:21:06Z",
+          "timestamp": 1164374466000
+        },
+        "page": "60-70",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Spherical finite type submanifolds.Applications"
+        ],
+        "prefix": "10.1007",
+        "author": [
+          {
+            "given": "Manuel",
+            "family": "Barros",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "297",
+        "published-online": {
+          "date-parts": [
+            [
+              2006,
+              10,
+              2
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "4_CR1",
+            "doi-asserted-by": "publisher",
+            "first-page": "77",
+            "DOI": "10.1017/S002776300000266X",
+            "volume": "108",
+            "author": "M. Barros",
+            "year": "1987",
+            "unstructured": "M. Barros and B.Y. Chen, \u201cSpherical submanifolds which are of 2-type via the second standard immersion of the sphere\u201d Nagoya Math.J. 108 (1987), 77\u201391.",
+            "journal-title": "Nagoya Math.J."
+          },
+          {
+            "key": "4_CR2",
+            "doi-asserted-by": "publisher",
+            "first-page": "627",
+            "DOI": "10.2969/jmsj/03940627",
+            "volume": "39",
+            "author": "M. Barros",
+            "year": "1987",
+            "unstructured": "M. Barros and B.Y. Chen, \u201cStationary 2-type surfaces in a hypersphere\u201d J.Math.Soc.Japan 39 (1987), 627\u2013648.",
+            "journal-title": "J.Math.Soc.Japan"
+          },
+          {
+            "key": "4_CR3",
+            "doi-asserted-by": "publisher",
+            "first-page": "329",
+            "DOI": "10.1007/BF00181605",
+            "volume": "24",
+            "author": "M. Barros",
+            "year": "1987",
+            "unstructured": "M. Barros and O.J. Garay, \u201c2-type surfaces in S3\u201d Geometriae Dedicata, 24 (1987), 329\u2013336",
+            "journal-title": "Geometriae Dedicata"
+          },
+          {
+            "key": "4_CR4",
+            "doi-asserted-by": "crossref",
+            "first-page": "575",
+            "DOI": "10.2748/tmj/1178228244",
+            "volume": "39",
+            "author": "M. Barros",
+            "year": "1987",
+            "unstructured": "M. Barros and F. Urbano, \u201cSpectral geometry of minimal surfaces in the sphere\u201d T\u00f4hoku Math.J. 39 (1987), 575\u2013588.",
+            "journal-title": "T\u00f4hoku Math.J."
+          },
+          {
+            "key": "4_CR5",
+            "first-page": "259",
+            "volume": "290",
+            "author": "R. Bryant",
+            "year": "1985",
+            "unstructured": "R. Bryant, \u201cMinimal surfaces of constant curvature in Sn(1)\u201d Trans.Amer.Math.Soc. 290 (1985), 259\u2013271",
+            "journal-title": "Trans.Amer.Math.Soc."
+          },
+          {
+            "key": "4_CR6",
+            "doi-asserted-by": "crossref",
+            "unstructured": "B.Y.Chen, \u201cTotal mean curvature and submanifolds of finite type\u201d Series in Pure Math., vol 1, World Scientific, 1984.",
+            "DOI": "10.1142/0065"
+          },
+          {
+            "key": "4_CR7",
+            "doi-asserted-by": "publisher",
+            "first-page": "209",
+            "DOI": "10.1512/iumj.1982.31.31018",
+            "volume": "31",
+            "author": "N. Ejiri",
+            "year": "1982",
+            "unstructured": "N. Ejiri, \u201cA counter example for Weiner's open question\u201d Indiana Univ.Math.J. 31 (1982), 209\u2013211.",
+            "journal-title": "Indiana Univ.Math.J."
+          },
+          {
+            "key": "4_CR8",
+            "doi-asserted-by": "publisher",
+            "first-page": "83",
+            "DOI": "10.2748/tmj/1178241037",
+            "volume": "27",
+            "author": "K. Kenmotsu",
+            "year": "1975",
+            "unstructured": "K. Kenmotsu, \u201cOn a parametrization of minimal immersions of R2 into S5\u201d T\u00f4hoku Math.J. 27 (1975), 83\u201390.",
+            "journal-title": "T\u00f4hoku Math.J."
+          },
+          {
+            "key": "4_CR9",
+            "doi-asserted-by": "publisher",
+            "first-page": "335",
+            "DOI": "10.2307/1970625",
+            "volume": "92",
+            "author": "H.B. Lawson",
+            "year": "1970",
+            "unstructured": "H.B. Lawson, \u201cComplete minimal surfaces in S3\u201d Ann. of Math. 92 (1970), 335\u2013374.",
+            "journal-title": "Ann. of Math."
+          },
+          {
+            "key": "4_CR10",
+            "doi-asserted-by": "publisher",
+            "first-page": "157",
+            "DOI": "10.3836/tjm/1270134269",
+            "volume": "11",
+            "author": "Y. Miyata",
+            "year": "1988",
+            "unstructured": "Y. Miyata, \u201c2-type surfaces of constant curvature in Sn\u201d Tokyo J. of Math. 11 (1988), 157\u2013204.",
+            "journal-title": "Tokyo J. of Math."
+          },
+          {
+            "key": "4_CR11",
+            "doi-asserted-by": "publisher",
+            "first-page": "379",
+            "DOI": "10.1007/BF01389060",
+            "volume": "81",
+            "author": "U. Pinkall",
+            "year": "1985",
+            "unstructured": "U. Pinkall, \u201cHopf tori in S3\u201d Invent.Math. 81 (1985), 379\u2013386.",
+            "journal-title": "Invent.Math."
+          },
+          {
+            "key": "4_CR12",
+            "doi-asserted-by": "publisher",
+            "first-page": "433",
+            "DOI": "10.2969/jmsj/03630433",
+            "volume": "36",
+            "author": "A. Ros",
+            "year": "1984",
+            "unstructured": "A. Ros, \u201cOn spectral geometry of Kaehler submanifolds\u201d J.Math.Soc. Japan 36 (1984), 433\u2013448.",
+            "journal-title": "J.Math.Soc. Japan"
+          },
+          {
+            "key": "4_CR13",
+            "doi-asserted-by": "publisher",
+            "first-page": "393",
+            "DOI": "10.1007/BF01161955",
+            "volume": "187",
+            "author": "A. Ros",
+            "year": "1984",
+            "unstructured": "A. Ros, \u201cEigenvalue inequalities for minimal submanifolds and P-manifolds\u201d Math.Z. 187 (1984), 393\u2013404.",
+            "journal-title": "Math.Z."
+          },
+          {
+            "key": "4_CR14",
+            "doi-asserted-by": "publisher",
+            "first-page": "62",
+            "DOI": "10.2307/1970556",
+            "volume": "88",
+            "author": "J. Simons",
+            "year": "1968",
+            "unstructured": "J. Simons, \u201cMinimal varieties in Riemannian manifolds\u201d Ann. of Math. 88 (1968), 62\u2013105.",
+            "journal-title": "Ann. of Math."
+          },
+          {
+            "key": "4_CR15",
+            "doi-asserted-by": "publisher",
+            "first-page": "380",
+            "DOI": "10.2969/jmsj/01840380",
+            "volume": "18",
+            "author": "T. Takahashi",
+            "year": "1966",
+            "unstructured": "T. Takahashi, \u201cMinimal immersions of Riemannian manifolds\u201d J.Math.Soc. Japan 18 (1966), 380\u2013385.",
+            "journal-title": "J.Math.Soc. Japan"
+          },
+          {
+            "key": "4_CR16",
+            "doi-asserted-by": "publisher",
+            "first-page": "453",
+            "DOI": "10.2969/jmsj/03830453",
+            "volume": "38",
+            "author": "S. Udagawa",
+            "year": "1986",
+            "unstructured": "S. Udagawa, \u201cSpectral geometry of Kaehler submanifolds of a complex projective space\u201d J.Math.Soc. Japan 38 (1986), 453\u2013472.",
+            "journal-title": "J.Math.Soc. Japan"
+          },
+          {
+            "key": "4_CR17",
+            "doi-asserted-by": "publisher",
+            "first-page": "19",
+            "DOI": "10.1512/iumj.1978.27.27003",
+            "volume": "27",
+            "author": "J.L. Weiner",
+            "year": "1978",
+            "unstructured": "J.L. Weiner, \u201cOn a problem of Chen, Willmore et al.\u201d Indiana Univ.Math.J. 27 (1978), 19\u201335.",
+            "journal-title": "Indiana Univ.Math.J."
+          },
+          {
+            "key": "4_CR18",
+            "first-page": "99",
+            "volume": "14",
+            "author": "T.J. Willmore",
+            "year": "1968",
+            "unstructured": "T.J. Willmore, \u201cMean curvature of immersed surfaces\u201d An.St.Univ. Iasi 14 (1968), 99\u2013103.",
+            "journal-title": "An.St.Univ. Iasi"
+          }
+        ],
+        "container-title": [
+          "Lecture Notes in Mathematics",
+          "Differential Geometry"
+        ],
+        "link": [
+          {
+            "URL": "http://link.springer.com/content/pdf/10.1007/BFb0086411",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2021,
+              8,
+              5
+            ]
+          ],
+          "date-time": "2021-08-05T03:17:29Z",
+          "timestamp": 1628133449000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "http://link.springer.com/10.1007/BFb0086411"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1989
+            ]
+          ]
+        },
+        "ISBN": [
+          "9783540518853",
+          "9783540468585"
+        ],
+        "references-count": 18,
+        "URL": "https://doi.org/10.1007/bfb0086411",
+        "ISSN": [
+          "0075-8434",
+          "1617-9692"
+        ],
+        "issn-type": [
+          {
+            "type": "print",
+            "value": "0075-8434"
+          },
+          {
+            "type": "electronic",
+            "value": "1617-9692"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1989
+            ]
+          ]
+        }
+      },
+      {
+        "institution": [
+          {
+            "name": "Portland State University",
+            "place": [
+              "Portland, OR"
+            ],
+            "department": [
+              "Speech Communication"
+            ]
+          }
+        ],
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              30
+            ]
+          ],
+          "date-time": "2022-03-30T15:15:32Z",
+          "timestamp": 1648653332578
+        },
+        "reference-count": 0,
+        "publisher": "Portland State University Library",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "DOI": "10.15760/etd.6294",
+        "type": "report",
+        "created": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              20
+            ]
+          ],
+          "date-time": "2018-09-20T13:33:09Z",
+          "timestamp": 1537450389000
+        },
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "A study of the narrative skills in kindergarten children with normal, impaired, and late developing language development"
+        ],
+        "prefix": "10.15760",
+        "author": [
+          {
+            "given": "Lisa",
+            "family": "McFarland",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "6539",
+        "published-online": {
+          "date-parts": [
+            [
+              2000,
+              1,
+              1
+            ]
+          ]
+        },
+        "deposited": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              20
+            ]
+          ],
+          "date-time": "2018-09-20T13:33:59Z",
+          "timestamp": 1537450439000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "https://archives.pdx.edu/ds/psu/25744"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2000,
+              1,
+              1
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.15760/etd.6294",
+        "published": {
+          "date-parts": [
+            [
+              2000,
+              1,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              4
+            ]
+          ],
+          "date-time": "2024-09-04T18:59:31Z",
+          "timestamp": 1725476371622
+        },
+        "reference-count": 0,
+        "publisher": "IATED",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              11
+            ]
+          ]
+        },
+        "DOI": "10.21125/iceri.2016.0535",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2016,
+              12,
+              2
+            ]
+          ],
+          "date-time": "2016-12-02T02:51:07Z",
+          "timestamp": 1480647067000
+        },
+        "page": "6724-6729",
+        "source": "Crossref",
+        "is-referenced-by-count": 9,
+        "title": [
+          "EDUCATION BY ACCESS TO VISUAL INFORMATION \u2013 METHODOLOGY OF MOULDING BEHAVIOUR BASED ON INTERNATIONAL RESEARCH PROJECT EXPERIENCES"
+        ],
+        "prefix": "10.21125",
+        "volume": "1",
+        "author": [
+          {
+            "given": "Grzegorz",
+            "family": "Sierpi\u0144ski",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Marcin",
+            "family": "Staniek",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "8703",
+        "event": {
+          "name": "International Technology, Education and Development Conference",
+          "start": {
+            "date-parts": [
+              [
+                2016,
+                11,
+                14
+              ]
+            ]
+          },
+          "number": "9",
+          "location": "Seville, Spain",
+          "end": {
+            "date-parts": [
+              [
+                2016,
+                11,
+                16
+              ]
+            ]
+          },
+          "acronym": "ICERI2016"
+        },
+        "container-title": [
+          "ICERI proceedings",
+          "ICERI2016 Proceedings"
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2016,
+              12,
+              2
+            ]
+          ],
+          "date-time": "2016-12-02T02:52:53Z",
+          "timestamp": 1480647173000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "http://library.iated.org/view/SIERPINSKI2016EDU"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              11
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.21125/iceri.2016.0535",
+        "ISSN": [
+          "2340-1095"
+        ],
+        "issn-type": [
+          {
+            "type": "electronic",
+            "value": "2340-1095"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              11
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              4
+            ]
+          ],
+          "date-time": "2025-09-04T13:48:57Z",
+          "timestamp": 1756993737642
+        },
+        "reference-count": 0,
+        "publisher": "American Society for Microbiology",
+        "issue": "1",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  1980,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "1980-07-01T00:00:00Z",
+              "timestamp": 331257600000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://journals.asm.org/non-commercial-tdm-license"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "journals.asm.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "J Clin Microbiol"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1980,
+              7
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Malignancy may be associated with impairment of the immune system. In children with acute leukemia, an impaired immunoglobulin M (IgM) antibody response to poliovirus was documented previously. It was of interest, therefore, to determine the immunoclass of antibodies produced against the O antigens of bacteria causing bacteremia in patients with leukemia and other malignancies. For control purposes, parallel studies were carried out in patients without maligancies but with infections caused by gram-negative bacteria. The patients with malignancies were adults, and those without malignancies were children. The serum specimens were selected from patients mounting an antibody response. IgG and IgM antibodies were identified by mercaptoethanol reduction and chromatography. Antibody titers against the O antigens of enteric bacteria were determined by the hemagglutination procedure. Antibodies of both IgM and IgG immunoclasses were produced by all but 1 of 16 patients with leukemia and by all but 1 of 12 subjects with other malignancies. Thus, a specific IgM immune deficiency in adult patients with leukemia or other malignancies complicated by bacteremia was not present; however, the magnitude of the antibody response of the patient with leukemia was less than that of the subjets with other maligancies, with the median antibody titers of the former being 320 and those of the latter being 2,560.</jats:p>",
+        "DOI": "10.1128/jcm.12.1.60-62.1980",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2020,
+              1,
+              5
+            ]
+          ],
+          "date-time": "2020-01-05T02:25:19Z",
+          "timestamp": 1578191119000
+        },
+        "page": "60-62",
+        "update-policy": "http://dx.doi.org/10.1128/asmj-crossmark-policy-page",
+        "source": "Crossref",
+        "is-referenced-by-count": 4,
+        "title": [
+          "Immunoglobulin G and immunoglobulin M antibody responses of patients with malignancies to the O antigens of bacteria causing bacteremia"
+        ],
+        "prefix": "10.1128",
+        "volume": "12",
+        "author": [
+          {
+            "given": "P J",
+            "family": "Gannon",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "M J",
+            "family": "Surgalla",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J E",
+            "family": "Fitzpatrick",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "E",
+            "family": "Neter",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "235",
+        "container-title": [
+          "Journal of Clinical Microbiology"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://journals.asm.org/doi/pdf/10.1128/jcm.12.1.60-62.1980",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://journals.asm.org/doi/pdf/10.1128/jcm.12.1.60-62.1980",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              5
+            ]
+          ],
+          "date-time": "2022-03-05T12:26:22Z",
+          "timestamp": 1646483182000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "https://journals.asm.org/doi/10.1128/jcm.12.1.60-62.1980"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1980,
+              7
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "1",
+          "published-print": {
+            "date-parts": [
+              [
+                1980,
+                7
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1128/jcm.12.1.60-62.1980"
+        ],
+        "URL": "https://doi.org/10.1128/jcm.12.1.60-62.1980",
+        "ISSN": [
+          "0095-1137",
+          "1098-660X"
+        ],
+        "issn-type": [
+          {
+            "value": "0095-1137",
+            "type": "print"
+          },
+          {
+            "value": "1098-660X",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1980,
+              7
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "1980-07-01",
+            "order": 2,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              30
+            ]
+          ],
+          "date-time": "2022-03-30T15:15:36Z",
+          "timestamp": 1648653336575
+        },
+        "reference-count": 0,
+        "publisher": "Southern Medical Association",
+        "issue": "8",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Southern Medical Journal"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1947,
+              8
+            ]
+          ]
+        },
+        "DOI": "10.1097/00007611-194708000-00018",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2011,
+              4,
+              6
+            ]
+          ],
+          "date-time": "2011-04-06T10:32:47Z",
+          "timestamp": 1302085967000
+        },
+        "page": "715",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "MASSIVE DOSES OF PURE ANTIRACHITIC VITAMIN"
+        ],
+        "prefix": "10.14423",
+        "volume": "40",
+        "author": [
+          {
+            "family": "&NA;",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "5542",
+        "container-title": [
+          "Southern Medical Journal"
+        ],
+        "language": "en",
+        "deposited": {
+          "date-parts": [
+            [
+              2014,
+              7,
+              16
+            ]
+          ],
+          "date-time": "2014-07-16T22:49:06Z",
+          "timestamp": 1405550946000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "http://content.wkhealth.com/linkback/openurl?sid=WKPTLP:landingpage&an=00007611-194708000-00018"
+          }
+        },
+        "subtitle": [
+          ""
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              1947,
+              8
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "8"
+        },
+        "URL": "https://doi.org/10.1097/00007611-194708000-00018",
+        "ISSN": [
+          "0038-4348"
+        ],
+        "issn-type": [
+          {
+            "value": "0038-4348",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1947,
+              8
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              4
+            ]
+          ],
+          "date-time": "2022-04-04T15:54:46Z",
+          "timestamp": 1649087686290
+        },
+        "reference-count": 0,
+        "publisher": "Elsevier BV",
+        "issue": "6",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2003,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2003-06-01T00:00:00Z",
+              "timestamp": 1054425600000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Metal Finishing"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2003,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1016/s0026-0576(03)80495-6",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2003,
+              10,
+              9
+            ]
+          ],
+          "date-time": "2003-10-09T00:37:07Z",
+          "timestamp": 1065659827000
+        },
+        "page": "141",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Powder transfer apparatus"
+        ],
+        "prefix": "10.1016",
+        "volume": "101",
+        "member": "78",
+        "container-title": [
+          "Metal Finishing"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0026057603804956?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0026057603804956?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              22
+            ]
+          ],
+          "date-time": "2019-02-22T09:53:33Z",
+          "timestamp": 1550829213000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0026057603804956"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2003,
+              6
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "6",
+          "published-print": {
+            "date-parts": [
+              [
+                2003,
+                6
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "S0026057603804956"
+        ],
+        "URL": "https://doi.org/10.1016/s0026-0576(03)80495-6",
+        "ISSN": [
+          "0026-0576"
+        ],
+        "issn-type": [
+          {
+            "value": "0026-0576",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2003,
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              19
+            ]
+          ],
+          "date-time": "2025-03-19T14:24:46Z",
+          "timestamp": 1742394286567
+        },
+        "reference-count": 4,
+        "publisher": "IEEE",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              12
+            ]
+          ]
+        },
+        "DOI": "10.1109/iceeccot.2016.7955241",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2017,
+              6,
+              26
+            ]
+          ],
+          "date-time": "2017-06-26T16:35:15Z",
+          "timestamp": 1498494915000
+        },
+        "page": "336-338",
+        "source": "Crossref",
+        "is-referenced-by-count": 3,
+        "title": [
+          "Cantilever and circular disc structure based capacitive shunt RF MEMS switches"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "K. Srinivasa",
+            "family": "Rao",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "M. Durga",
+            "family": "Prakash",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Lakshmi Narayana",
+            "family": "Thalluri",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TMTT.2015.2459689"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TADVP.2004.841654"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/TMTT.2003.809650"
+          },
+          {
+            "journal-title": "RF MEMS switches and switch circuits",
+            "year": "2001",
+            "author": "rebeiz",
+            "key": "ref1"
+          }
+        ],
+        "event": {
+          "name": "2016 International Conference on Electrical, Electronics, Communication, Computer and Optimization Techniques (ICEECCOT)",
+          "start": {
+            "date-parts": [
+              [
+                2016,
+                12,
+                9
+              ]
+            ]
+          },
+          "location": "Mysuru, India",
+          "end": {
+            "date-parts": [
+              [
+                2016,
+                12,
+                10
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2016 International Conference on Electrical, Electronics, Communication, Computer and Optimization Techniques (ICEECCOT)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/7948634/7955174/07955241.pdf?arnumber=7955241",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2017,
+              7,
+              12
+            ]
+          ],
+          "date-time": "2017-07-12T00:02:32Z",
+          "timestamp": 1499817752000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "http://ieeexplore.ieee.org/document/7955241/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              12
+            ]
+          ]
+        },
+        "references-count": 4,
+        "URL": "https://doi.org/10.1109/iceeccot.2016.7955241",
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              12
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              30
+            ]
+          ],
+          "date-time": "2026-04-30T17:12:53Z",
+          "timestamp": 1777569173162,
+          "version": "3.51.4"
+        },
+        "reference-count": 0,
+        "publisher": "Institute of Slavic Studies of the Russian Academy of Sciences",
+        "issue": "1",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Slovene"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "abstract": "<jats:p>This paper deals with the phrase intonation of two neighboring Eastern Middle-Russian dialects with okan\u2019je and akan\u2019je spoken in Melenki and Gus\u2019-Khrustal\u2019ny districts of Vladimir region. The study, based on the material of dialectal speech recordings made in the 2008 and 2009 (nine speakers born in 1914\u20131940, total duration \u2014 19 hours), reveals that the prosodic system of these dialects is relatively similar to that one of the Modern Standard Russian, sharing with it most pitch accents (L*, H*+L, L*+H) and association of tonal structures with the basic communicative categories \u2014 statements, yes-no questions, wh-question, non-finality, commands and requests. The main distinctive properties of the Vladimir dialect as compared to Standard Russian are: 1) phonological distinction between two rising pitch accents \u2014 L*+H and L+H*; 2) probable H* pitch accents in dialects with akan\u2019je; 3) \u201cfalling set-up\u201d on pretonic syllable for rising pitch accents; 4) earlier timing of rising L*+H and falling H*+L pitch accents; 5) phonological distinction between two initial boundary tones \u2014 %L and %H; 6) the wide distribution of falling final boundary tone HL%; 7) some traces of \u2018word-to-word\u2019 tonal prominence. Meanwhile, the difference between the two Vladimir dialects themselves is not that noticeable and lies in the domain of phonetic realization and the degree of manifestation of particular elements of prosodic structure, as well as in the degree of their prevalence rather than in the set of prosodic units.</jats:p>",
+        "DOI": "10.31168/2305-6754.2023.1.05",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2023,
+              12,
+              18
+            ]
+          ],
+          "date-time": "2023-12-18T16:28:36Z",
+          "timestamp": 1702916916000
+        },
+        "page": "155-224",
+        "source": "Crossref",
+        "is-referenced-by-count": 2,
+        "title": [
+          "Phrase Prosody of Two Eastern Middle-Russian Dialects"
+        ],
+        "prefix": "10.31168",
+        "volume": "12",
+        "author": [
+          {
+            "name": "Vinogradov Russian Language Institute, Russian Academy of Sciences",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0140-6833",
+            "authenticated-orcid": false,
+            "given": "Sergey",
+            "family": "Knyazev",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8341-4406",
+            "authenticated-orcid": false,
+            "given": "Svetlana",
+            "family": "Dyachenko",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "name": "Vinogradov Russian Language Institute, Russian Academy of Sciences",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "16235",
+        "published-online": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "container-title": [
+          "Slovene"
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              12,
+              18
+            ]
+          ],
+          "date-time": "2023-12-18T16:28:44Z",
+          "timestamp": 1702916924000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "http://slovene.ru/ojs/index.php/slovene/article/view/604"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "1",
+          "published-online": {
+            "date-parts": [
+              [
+                2023
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2023
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.31168/2305-6754.2023.1.05",
+        "ISSN": [
+          "2304-0785",
+          "2305-6754"
+        ],
+        "issn-type": [
+          {
+            "value": "2304-0785",
+            "type": "print"
+          },
+          {
+            "value": "2305-6754",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              4
+            ]
+          ],
+          "date-time": "2025-09-04T13:49:14Z",
+          "timestamp": 1756993754357
+        },
+        "reference-count": 0,
+        "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+        "issue": "2",
+        "content-domain": {
+          "domain": [
+            "www.ahajournals.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Circulation Research"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1963,
+              2
+            ]
+          ]
+        },
+        "abstract": "<jats:p>\n            Hypopotassemia was produced in dogs by hemodialysis or by intravenous administration of glucose with insulin. Both methods resulted in a similar decrease in plasma K concentration and similar ECG changes although K was withdrawn from the cells during dialysis while it entered the cells during glucose-insulin infusion. The maximal plasma K decrease occurred after two hours of dialysis or glucose-insulin infusion; administration of glucose-insulin after dialysis resulted in no further plasma potassium decrease. However, dialysis after glucose-insulin infusion caused further lowering of plasma potassium. The ECG changes were evaluated in relation to changes in plasma K concentration. The most consistent effects of hypopotassemia were in decreasing order: increased duration of the QRS complex, increased duration of the QT\n            <jats:sub>c</jats:sub>\n            interval and increase in amplitude of the P wave. Correlation coefficients (R) between these ECG changes and the plasma K decreases were of the order -0.48 to -0.54. The ECG changes failed to show even a weak correlation with absolute plasma K concentrations or with calculated changes in intracellular K.\n          </jats:p>",
+        "DOI": "10.1161/01.res.12.2.145",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2012,
+              6,
+              12
+            ]
+          ],
+          "date-time": "2012-06-12T00:44:49Z",
+          "timestamp": 1339461889000
+        },
+        "page": "145-151",
+        "update-policy": "http://dx.doi.org/10.1161/crossmarkpolicy",
+        "source": "Crossref",
+        "is-referenced-by-count": 3,
+        "title": [
+          "Effects of Hemodialysis and of Glucose-Insulin Administration on Plasma Potassium and on the Electrocardiogram"
+        ],
+        "prefix": "10.1161",
+        "volume": "12",
+        "author": [
+          {
+            "given": "BORYS",
+            "family": "SURAWICZ",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Division of Experimental Medicine and the Metabolic Unit of the Department of Medicine, University of Vermont, College of Medicine, Burlington, Vermont"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "ARTHUR S.",
+            "family": "KUNIN",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Division of Experimental Medicine and the Metabolic Unit of the Department of Medicine, University of Vermont, College of Medicine, Burlington, Vermont"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "ETHAN A. H.",
+            "family": "SIMS",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Division of Experimental Medicine and the Metabolic Unit of the Department of Medicine, University of Vermont, College of Medicine, Burlington, Vermont"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "276",
+        "container-title": [
+          "Circulation Research"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.ahajournals.org/doi/pdf/10.1161/01.RES.12.2.145",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              12
+            ]
+          ],
+          "date-time": "2024-05-12T18:45:42Z",
+          "timestamp": 1715539542000
+        },
+        "score": 0.0,
+        "resource": {
+          "primary": {
+            "URL": "https://www.ahajournals.org/doi/10.1161/01.RES.12.2.145"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1963,
+              2
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "2",
+          "published-print": {
+            "date-parts": [
+              [
+                1963,
+                2
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1161/01.RES.12.2.145"
+        ],
+        "URL": "https://doi.org/10.1161/01.res.12.2.145",
+        "ISSN": [
+          "0009-7330",
+          "1524-4571"
+        ],
+        "issn-type": [
+          {
+            "value": "0009-7330",
+            "type": "print"
+          },
+          {
+            "value": "1524-4571",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1963,
+              2
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "1962-07-20",
+            "order": 0,
+            "name": "received",
+            "label": "Received",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "1963-02-01",
+            "order": 2,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          }
+        ]
+      }
+    ],
+    "items-per-page": 10,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}
