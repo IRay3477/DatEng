@@ -1,164 +1,118 @@
-# Deliverable Sprint 0: Data Engineering Project
+# Scientific Publication Pipeline — Kelompok 5
 
-## 1. Judul Project
-**Automated Scientific Publication Metadata & Open Access Enrichment Pipeline**
+Mini project Data Engineering (A), Teknologi Informasi Universitas Udayana.
+Dosen: Dr. Eng. Desy Purnami Singgih Putri, S.Si., M.Sc.
 
----
+| Nama | NIM |
+|---|---|
+| I Made Ray Adhya Khrisna | 2305551003 |
+| Ida Bagus Komang Adi Prayista | 2305551070 |
+| Nolan Mahotama Abipantara Urya Gotama | 2305551111 |
 
-## 2. Use Case
-Integrasi otomatis metadata publikasi ilmiah internasional dengan basis data reputasi jurnal *open access*. Pipeline ini memungkinkan institusi riset dan akademisi untuk memverifikasi secara instan apakah sebuah artikel terbit di jurnal bereputasi terindeks resmi, mengetahui negara penerbit, lisensi hak cipta, serta transparansi biaya publikasi (Article Processing Charges / APC).
+## 1. Use case
+Menggabungkan metadata artikel ilmiah (Crossref) dengan data jurnal open access (DOAJ) dan kurs (ExchangeRate-API) agar setiap artikel sampel dapat dicek: apakah jurnalnya terdaftar di DOAJ, apa lisensinya, dan berapa APC-nya dalam USD.
+Grain output: **1 baris = 1 artikel (DOI unik)**.
 
----
-
-## 3. Target User
-* **Peneliti & Mahasiswa:** Menilai kredibilitas jurnal dan status biaya penerbitan sebelum mengutip atau menerbitkan karya.
-* **Pengelola Perpustakaan / Institusi Akademik:** Menganalisis tren publikasi riset kampus dan kepatuhan terhadap kebijakan *Open Access*.
-* **Data Analyst / Bibliometrikus:** Menganalisis produktivitas riset global berdasarkan negara dan disiplin ilmu.
-
----
-
-## 4. Sumber Data 1 (API)
-* **Nama Sumber:** Crossref REST API
-* **Tipe:** REST API (JSON)
-* **Endpoint:** `https://api.crossref.org/works?rows=50&filter=type:journal-article`
-* **Deskripsi:** Registri DOI artikel ilmiah global yang menyediakan metadata judul, penulis, tahun, dan nomor ISSN jurnal.
-* **Status Ingestion:** Tersimpan di `raw/crossref_raw.json` dan `raw/crossref_raw.csv`.
-
----
-
-## 5. Sumber Data 2 (CSV / Master Data)
-* **Nama Sumber:** Directory of Open Access Journals (DOAJ)
-* **Tipe:** Flat File Tabular (CSV)
-* **URL Unduh:** `https://doaj.org/csv`
-* **Deskripsi:** Direktori master database independen yang mengindeks lebih dari 23.000 jurnal *open access* berkualitas tinggi beserta atribut lisensi dan kebijakannya.
-* **Status Ingestion:** Tersimpan di `raw/doaj_journals_raw.csv` dan sampel di `raw/doaj_sample.csv`.
-
----
-
-## 5B. Identifikasi Struktur / Schema Data Kedua Sumber
-| Aspek | Source 1: Crossref (API) | Source 2: DOAJ (CSV) |
-|---|---|---|
-| **Bentuk Struktur** | **Semi-terstruktur / Hierarkis (JSON)** | **Terstruktur / Tabular Datar (CSV)** |
-| **Bentuk Hirarki** | Bersarang (*nested*): Root `message` $\rightarrow$ list `items[]` $\rightarrow$ objek artikel | Tabel matriks 2 dimensi (baris record $\times$ kolom atribut) |
-| **Jumlah Kolom / Key** | ~30 field dinamis per item artikel | 54 kolom terdefinisi per baris jurnal |
-| **Format Identitas** | DOI string, array ISSN `["XXXX-XXXX"]`, array penulis | Print ISSN `XXXX-XXXX`, Online EISSN `XXXX-XXXX` |
-
----
-
-## 6. Contoh 5 Record Masing-Masing Sumber
-
-### A. Sampel 5 Record Crossref (Source 1)
-| DOI | Title | ISSN | Year |
+## 2. Sumber data & integration key
+| Sumber | Endpoint | Cara ambil | Peran |
 |---|---|---|---|
-| `10.1016/j.proeng.2017.01.234` | Analysis of Structural Stability | 1877-7058 | 2017 |
-| `10.1088/1742-6596/1234/1/012001` | Quantum Mechanics Simulation | 1742-6588 | 2019 |
-| `10.3390/su13042105` | Sustainable Supply Chain Review | 2071-1050 | 2021 |
-| `10.1371/journal.pone.0245678` | Deep Learning for Clinical NLP | 1932-6203 | 2021 |
-| `10.1109/access.2020.2987654` | IoT Edge Network Optimization | 2169-3536 | 2020 |
+| Crossref REST API | `api.crossref.org/works` | stratified random sampling: 1.250 artikel per tahun terbit, 2011 s.d. tahun snapshot | fakta artikel (grain) |
+| DOAJ | `doaj.org/csv` | seluruh CSV jurnal | lookup per jurnal (`doaj_id`) |
+| ExchangeRate-API | `open.er-api.com/v6/latest/USD` | kurs USD terbaru | konversi APC ke USD |
 
-### B. Sampel 5 Record DOAJ (Source 2)
-| Journal Title | Print ISSN | Online EISSN | Publisher | Country | APC |
-|---|---|---|---|---|---|
-| Keria: Studia Latina et Graeca | 1580-0261 | 2350-4234 | University of Ljubljana Press | Slovenia | No |
-| Redes (Canoas) | - | 2318-8081 | Universidade La Salle | Brazil | No |
-| ELOPE | 1581-8918 | 2386-0316 | University of Ljubljana Press | Slovenia | No |
-| Slovenščina 2.0 | - | 2335-2736 | University of Ljubljana Press | Slovenia | No |
-| Stoa | - | 2007-1868 | Universidad Veracruzana | Mexico | No |
+Integration key: **Print ISSN**, lalu **Online ISSN** bila Print ISSN tidak cocok. LEFT JOIN Crossref ← DOAJ dengan `validate="many_to_one"` (N artikel : 1 jurnal). ISSN DOAJ yang dipakai lebih dari satu jurnal tidak dipakai sebagai key. Hasil join dicatat di `match_status`: `matched_print_issn`, `matched_online_issn`, `ambiguous_issn`, `no_issn`, `not_matched_to_doaj`.
 
----
-
-## 7. Daftar Atribut yang Akan Digunakan
-
-| Sumber | Nama Kolom / Atribut | Tipe Data | Peran / Deskripsi |
-|---|---|---|---|
-| **Crossref** | `doi` | String | Identitas unik artikel (Primary Key) |
-| **Crossref** | `title` | String | Judul publikasi / artikel ilmiah |
-| **Crossref** | `author` | String | Nama penulis artikel |
-| **Crossref** | `publication_year` | Integer | Tahun rilis artikel |
-| **Crossref** | `issn` | String | **Foreign Key** penghubung ke jurnal |
-| **DOAJ** | `Journal title` | String | Nama resmi jurnal |
-| **DOAJ** | `Journal ISSN / EISSN` | String | **Primary Key** referensi jurnal |
-| **DOAJ** | `Publisher` | String | Lembaga / penerbit jurnal |
-| **DOAJ** | `Country of publisher` | String | Negara asal penerbit |
-| **DOAJ** | `Journal license` | String | Jenis lisensi (misal: CC BY, CC BY-SA) |
-| **DOAJ** | `APC` | String | Status biaya publikasi (Yes / No) |
-| **DOAJ** | `APC amount` | String/Float| Nominal biaya publikasi (jika berbayar) |
-| **DOAJ** | `Subjects` | String | Bidang / disiplin ilmu jurnal |
-
----
-
-## 8. Kunci & Logika Integrasi (Integration Key / Logic)
-* **Kunci Penghubung (Join Key):** Nomor **`ISSN`** (International Standard Serial Number).
-* **Logika Penggabungan (Merge Logic):**
-  1. *Standarisasi format:* Menghilangkan tanda strip `-` dan spasi pada nomor ISSN dari kedua sumber data (misal: `1234-5678` menjadi `12345678`).
-  2. *Relasi:* Dilakukan operasi `LEFT JOIN` dari tabel artikel Crossref ke tabel jurnal DOAJ dengan kondisi:
-     $$\text{Crossref.clean\_issn} = \text{DOAJ.clean\_pissn} \quad\text{ATAU}\quad \text{Crossref.clean\_issn} = \text{DOAJ.clean\_eissn}$$
-  3. Hasil join menghasilkan data artikel yang terperkaya (*enriched*), di mana artikel yang terbit di jurnal DOAJ akan memiliki atribut reputasi open access, sedangkan yang bukan open access berlabel `Unindexed / Non-DOAJ`.
-
----
-
-## 9. Rancangan Output Dataset
-* **Nama Dataset Akhir:** `enriched_publications.csv` / `enriched_publications.parquet`
-* **Lokasi Penyimpanan:** Folder `processed/`
-* **Skema Kolom Output:**
-  `[doi, title, author, publication_year, issn, journal_title, publisher, country, is_doaj_indexed, license, apc_status, apc_amount, subjects]`
-
----
-
-## 10. Pendekatan Pipeline: ETL (Extract - Transform - Load)
-* **Pilihan Pendekatan:** **ETL**
-* **Alasan Pemilihan:**
-  1. **Kebutuhan Standarisasi Awal:** Nilai `ISSN` pada data Crossref dan DOAJ memiliki variasi format (sebagian memakai tanda hubung `-`, sebagian tanpa tanda hubung, serta adanya perbedaan antara versi cetak dan elektronik). Standarisasi dan pembersihan perlu dilakukan sebelum proses penggabungan.
-  2. **Efisiensi Penyimpanan:** Dataset DOAJ berukuran relatif besar (54 kolom) sedangkan yang dibutuhkan hanya 8 kolom esensial. Dengan pendekatan ETL, kita memfilter dan membuang kolom yang tidak relevan selama proses *Transform*, sehingga data yang masuk ke storage analitik (`processed/`) tetap ramping dan cepat diproses.
-
----
-
-## 11. Diagram Arsitektur Awal Pipeline
-
-```mermaid
-flowchart LR
-    subgraph Data_Sources ["Public Data Sources"]
-        S1["Source 1: Crossref REST API<br/>(Dynamic JSON)"]
-        S2["Source 2: DOAJ Master<br/>(Static CSV)"]
-    end
-
-    subgraph Ingestion_Stage ["Ingestion & Raw Layer"]
-        ING["Python Ingestion Script<br/>(scripts/sampel.py)"]
-        RAW1[("raw/crossref_raw.json<br/>raw/crossref_raw.csv")]
-        RAW2[("raw/doaj_journals_raw.csv<br/>raw/doaj_sample.csv")]
-    end
-
-    subgraph Processing_Stage ["Transformation & Integration Layer"]
-        TRANS["Clean & Match Engine<br/>• Normalisasi ISSN<br/>• Filter Missing Values<br/>• Join by ISSN"]
-    end
-
-    subgraph Output_Layer ["Processed / Analytical Layer"]
-        OUT[("processed/<br/>enriched_publications.parquet")]
-    end
-
-    S1 --> ING
-    S2 --> ING
-    ING --> RAW1
-    ING --> RAW2
-    RAW1 --> TRANS
-    RAW2 --> TRANS
-    TRANS --> OUT
+## 3. Arsitektur
 ```
-
----
-
-### Struktur Folder Proyek Saat Ini:
-```text
-Tugas 1/
-|-- raw/
-|   |-- crossref_raw.json        # Data mentah API Crossref (JSON)
-|   |-- crossref_raw.csv         # Ekstraksi tabular sampel Crossref
-|   |-- doaj_journals_raw.csv    # Master dataset DOAJ (~25 MB)
-|   |-- doaj_sample.csv          # Sampel ringkas 50 record DOAJ
-|-- processed/                   # Folder penampung output terintegrasi (Sprint 1/2)
-|-- scripts/
-|   |-- sampel.py                # Script otomatis pengambil data mentah (ingestion)
-|-- logs/                        # Folder log eksekusi pipeline
-|-- config/                      # Folder konfigurasi parameter & URL
-|-- README.md                    # Dokumen deliverable Sprint 0 (file ini)
+Crossref API ─┐
+DOAJ CSV ─────┼─► raw/ (apa adanya + manifest) ─► raw_validation ─► clean_crossref ┐
+Kurs API ─────┘                                                  └► clean_doaj ─────┴─► integration
+   ─► load (Parquet + SQLite di work/<run_id>) ─► processed_validation (quality gate) ─► publish
+   ─► processed/ atau processed_backfill/snapshot_date=<tgl>/      log & metadata ─► logs/
 ```
+11 task dalam `PIPELINE_DAG` (8 level), dijalankan berurutan sesuai topological order. Diagram DAG:
+![DAG](https://raw.githubusercontent.com/IRay3477/DatEng/main/docs/Diagram_DAG_Kelompok_5_Sprint_3.png)
+
+## 4. Struktur folder (Google Drive: `MyDrive/kelompok5_publication_pipeline/`)
+```
+raw/
+  crossref/ingestion_date=<tgl>/crossref_<tahun>.jsonl.gz
+  doaj/ingestion_date=<tgl>/doaj_journals.csv
+  fx_rates/ingestion_date=<tgl>/fx_rates_usd.json
+  _manifests/manifest_<tgl>.json        ← penanda snapshot lengkap
+staging/                                 ← Crossref yang sudah di-flatten (CSV)
+processed/                               ← snapshot terbaru
+  articles_enriched/issued_year=<tahun>/ ← Parquet dipartisi per tahun terbit
+  journals_doaj.parquet, journal_license.parquet, fx_rates.parquet
+  publications.db                        ← SQLite (articles, journals_doaj, journal_license, fx_rates, pipeline_runs)
+processed_backfill/snapshot_date=<tgl>/  ← hasil backfill, terpisah dari processed/
+logs/
+  task_runs.csv, task_events.csv, pipeline_run_history.csv
+  monitoring_summary.csv, alerts.csv
+  quality_reports/quality_report_<run_id>.csv
+  run_metadata/run_metadata_<run_id>.json
+requirements.txt                         ← ditulis notebook (Bagian 13)
+```
+README ini disimpan di repository GitHub, tidak di folder Drive.
+
+## 5. Cara menjalankan
+1. Buka notebook di Google Colab.
+2. Buat secret `CROSSREF_EMAIL` di panel 🔑 **Secrets** (isi: email untuk polite pool Crossref) dan aktifkan **Notebook access**. Email tidak ditulis di kode.
+3. Atur `INGESTION_DATE` di sel konfigurasi (lihat bagian 6).
+4. Jalankan **Runtime → Restart and run all**. Notebook meminta izin mount Google Drive.
+
+Dependency: `pip install -r requirements.txt`. File ini ditulis oleh notebook (Bagian 13) dari versi package yang benar-benar terpasang di Colab saat run.
+
+## 6. Parameter & mode run
+| Parameter / fungsi | Arti |
+|---|---|
+| `INGESTION_DATE = None` | snapshot = tanggal hari ini (WITA); data diambil dari ketiga API |
+| `INGESTION_DATE = "YYYY-MM-DD"` | memproses ulang snapshot raw yang sudah lengkap, tanpa request ke API |
+| `run_pipeline(snapshot_date)` | satu entry point untuk seluruh DAG; mengembalikan ringkasan run |
+| `scheduled_run()` | entry point untuk scheduler: `run_pipeline(<tanggal hari ini WITA>)` |
+| schedule | `0 9 1 * *` Asia/Makassar (tanggal 1 setiap bulan, 09:00 WITA) — **didefinisikan, belum diaktifkan** |
+
+Aturan 1 snapshot = 1 hari: snapshot yang belum lengkap hanya boleh diambil pada tanggal snapshot itu sendiri, karena ketiga sumber hanya menyediakan kondisi saat ini. Tanggal lain ditolak (`SnapshotDateError`) sebelum task pertama berjalan.
+
+`run_type` ditentukan otomatis: `normal` (snapshot terbaru, run pertama), `rerun` (snapshot terbaru yang pernah di-run), `backfill` (snapshot lebih lama dari snapshot lengkap terbaru).
+
+## 7. Quality rules
+Quality gate dijalankan pada kandidat output di `work/<run_id>` **sebelum** publish.
+- **STOP** (gagal → run berhenti, processed lama tidak diganti):
+  - 12 cek raw validation: jumlah artikel per tahun = kuota, total artikel dan baris DOAJ = manifest, DOI tidak kosong, kolom ISSN dan kolom kunci DOAJ ada, DOAJ ≥ 20.000 baris, judul jurnal tidak kosong, basis kurs USD, ≥ 100 mata uang, kurs > 0, kurs USD = 1.
+  - 17 cek read-back pada Parquet + SQLite kandidat: row count = hasil transform, DOI tidak NULL dan tidak duplikat, schema kolom, kolom wajib tidak NULL, konsistensi `match_status`/`doaj_id`, foreign key, DOI Parquet = DOI SQLite.
+- **WARNING** (dicatat, publish tetap jalan): mata uang APC tanpa kurs, tahun terbit tidak valid, ISSN ambigu, `fx_date` ≠ `snapshot_date`, umur snapshot > 35 hari (tidak dicek untuk backfill).
+
+Status gate: `PASS`, `FAIL`, `NOT_REACHED` (cek STOP yang sempat jalan lolos, tetapi run berhenti sebelum read-back), `NOT_RUN`. Hasil per rule: `logs/quality_reports/quality_report_<run_id>.csv`. Ringkasan per run: `logs/monitoring_summary.csv`; alert ERROR/WARNING: `logs/alerts.csv`.
+
+## 8. Retry & failure policy
+- **Retry** hanya untuk request HTTP di task extract dan hanya untuk transient failure: timeout, koneksi putus, HTTP 429/5xx. Maksimal 3 percobaan, backoff 2 dan 4 detik.
+- **Langsung stop** untuk HTTP 4xx lain, schema berubah, key tidak unik, tipe data rusak, atau cek validasi gagal.
+- Task gagal → `failed`; hanya task turunannya yang `skipped`, cabang lain tetap berjalan.
+- Processed hanya diganti oleh task `publish`: salinan diverifikasi dulu, lalu swap; swap gagal → rollback; sesi mati di tengah swap → `recover_processed()` pada run berikutnya.
+
+## 9. Rerun & backfill
+- **Load = full refresh per snapshot** (bukan upsert). Rerun snapshot yang sama memakai raw yang sudah ada dan menghasilkan isi tabel `articles` yang identik (dibandingkan lewat `articles_fingerprint`).
+- **Backfill** hanya untuk snapshot yang raw-nya sudah lengkap tersimpan; hasilnya ditulis ke `processed_backfill/snapshot_date=<tgl>/` sehingga `processed/` (snapshot terbaru) tidak tertimpa. Snapshot yang tidak pernah diambil tidak bisa di-backfill.
+- Setiap run menulis `logs/run_metadata/run_metadata_<run_id>.json`: raw yang dipakai (path + checksum), output (path + checksum), row count, versi package. Checksum `publications.db` selalu berubah antar run karena tabel `pipeline_runs` bertambah, dan nama file partisi Parquet berisi UUID acak yang berbeda setiap run. Karena itu perbandingan isi data antar run memakai `articles_fingerprint`; checksum dipakai untuk memastikan file yang dipakai/dihasilkan satu run tidak berubah setelahnya.
+
+## 10. Keterbatasan
+- **Match rate rendah** (lihat run terakhir di bawah). `not_matched_to_doaj` berarti jurnalnya tidak ada di DOAJ atau ISSN-nya tidak cocok, **bukan** berarti artikel tidak terindeks di mana pun: DOAJ hanya berisi jurnal open access yang mendaftar.
+- **Sampel acak berganti setiap snapshot.** Selisih angka antar snapshot bukan tren.
+- **Normalisasi ISSN membuang nilai yang formatnya tidak valid** (dijadikan kosong, tidak diperbaiki), sehingga sebagian artikel bisa jatuh ke `no_issn`.
+- `doaj_id` adalah nomor baris DOAJ setelah dedup pada snapshot tersebut, jadi tidak stabil antar snapshot.
+- **Schedule belum aktif.** Colab tidak berjalan 24/7; run dijalankan manual.
+- Uji kegagalan (API error, crash saat publish, kandidat rusak) memakai **simulasi** di notebook.
+- Alert baru berupa file CSV, belum dikirim ke email/chat.
+- DOAJ dan kurs hanya menyediakan data saat ini, sehingga snapshot lama tidak bisa diambil ulang.
+
+## Hasil run acuan
+Angka dari snapshot 2026-11-07. Snapshot lain memakai sampel acak yang berbeda, jadi angkanya akan berbeda dan selisihnya bukan tren.
+
+| | |
+|---|---|
+| snapshot_date | 2026-11-07 |
+| artikel (1 baris = 1 DOI) | 20.000 |
+| jurnal DOAJ | 23.577 |
+| artikel match ke DOAJ | 3.798 (18,99%): 1.650 via Print ISSN, 2.148 via Online ISSN |
+| quality gate | PASS (34 rule, 2 WARNING: 1 mata uang APC tanpa kurs; `fx_date` 2026-11-06 ≠ snapshot 2026-11-07) |

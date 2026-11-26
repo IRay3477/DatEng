@@ -1,0 +1,7 @@
+# Dibuat otomatis oleh notebook pada 2026-11-26 WITA
+# Python 3.13.16 (Google Colab). Modul lain yang dipakai adalah standard library.
+# google-colab (drive, userdata) sudah tersedia di Colab dan tidak di-install lewat pip.
+requests==2.32.4
+pandas==2.2.3
+numpy==2.4.6
+pyarrow==23.0.1
