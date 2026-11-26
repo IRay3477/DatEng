@@ -107,12 +107,14 @@ Status gate: `PASS`, `FAIL`, `NOT_REACHED` (cek STOP yang sempat jalan lolos, te
 - DOAJ dan kurs hanya menyediakan data saat ini, sehingga snapshot lama tidak bisa diambil ulang.
 
 ## Hasil run acuan
-Angka dari snapshot 2026-11-07. Snapshot lain memakai sampel acak yang berbeda, jadi angkanya akan berbeda dan selisihnya bukan tren.
+Angka dari snapshot 2026-11-26. Snapshot lain memakai sampel acak yang berbeda, jadi angkanya akan berbeda dan selisihnya bukan tren.
 
 | | |
 |---|---|
-| snapshot_date | 2026-11-07 |
+| snapshot_date | 2026-11-26 |
 | artikel (1 baris = 1 DOI) | 20.000 |
-| jurnal DOAJ | 23.577 |
-| artikel match ke DOAJ | 3.798 (18,99%): 1.650 via Print ISSN, 2.148 via Online ISSN |
-| quality gate | PASS (34 rule, 2 WARNING: 1 mata uang APC tanpa kurs; `fx_date` 2026-11-06 ≠ snapshot 2026-11-07) |
+| jurnal DOAJ (setelah dedup) | 23.667 |
+| artikel match ke DOAJ | 3.827 (19,14%): 1.673 via Print ISSN, 2.154 via Online ISSN |
+| artikel tanpa ISSN (`no_issn`) | 160 |
+| quality gate | PASS (34 rule, 2 WARNING: 1 jurnal dengan APC mata uang KPW yang tidak ada di tabel kurs; `fx_date` 2026-11-25 ≠ snapshot 2026-11-26) |
+| ekstraksi ketiga sumber | 627,6 detik (208 request Crossref) |
