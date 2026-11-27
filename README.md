@@ -114,7 +114,7 @@ Angka dari snapshot 2026-11-26. Snapshot lain memakai sampel acak yang berbeda, 
 | snapshot_date | 2026-11-26 |
 | artikel (1 baris = 1 DOI) | 20.000 |
 | jurnal DOAJ (setelah dedup) | 23.667 |
-| artikel match ke DOAJ | 3.827 (19,14%): 1.673 via Print ISSN, 2.154 via Online ISSN |
+| artikel match ke DOAJ | 3.827 (19,13%): 1.673 via Print ISSN, 2.154 via Online ISSN |
 | artikel tanpa ISSN (`no_issn`) | 160 |
 | quality gate | PASS (34 rule, 2 WARNING: 1 jurnal dengan APC mata uang KPW yang tidak ada di tabel kurs; `fx_date` 2026-11-25 ≠ snapshot 2026-11-26) |
 | ekstraksi ketiga sumber | 627,6 detik (208 request Crossref) |
