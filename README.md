@@ -51,9 +51,10 @@ logs/
   monitoring_summary.csv, alerts.csv
   quality_reports/quality_report_<run_id>.csv
   run_metadata/run_metadata_<run_id>.json
+evidence/<skenario>/<run_id>/            ← salinan bukti run kunci + manifests/ + index.csv (Bagian 13)
 requirements.txt                         ← ditulis notebook (Bagian 13)
 ```
-README ini disimpan di repository GitHub, tidak di folder Drive.
+README ini disimpan di repository GitHub (root) dan di folder pengumpulan (`Kode/`), tidak di folder pipeline Drive. Folder pengumpulan juga berisi salinan `evidence/` dan diagram di `docs/`.
 
 ## 5. Cara menjalankan
 1. Buka notebook di Google Colab.
